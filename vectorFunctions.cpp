@@ -1,3 +1,8 @@
+// Matt Poremba
+// COSC 2030
+// 23 April 2018
+// vectorFunctions.cpp
+
 #include "vectorFunctions.h"
 
 // Original code from: https://www.geeksforgeeks.org/quick-sort/

@@ -1,3 +1,8 @@
+// Matt Poremba
+// COSC 2030
+// 23 April 2018
+// vectorFunctions.h
+
 #ifndef _VECTORFUNCTIONS_H_
 #define _VECTORFUNCTIONS_H_
 

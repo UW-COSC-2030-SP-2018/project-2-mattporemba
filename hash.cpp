@@ -1,4 +1,6 @@
 // Matt Poremba
+// COSC 2030
+// 5 May 2018
 // hash.cpp
 
 #include "hash.h"

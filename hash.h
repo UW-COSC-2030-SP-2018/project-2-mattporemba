@@ -7,6 +7,10 @@
 #include <list>
 #include <iostream>
 using namespace std;
+// Matt Poremba
+// COSC 2030
+// 5 May 2018
+// hash.h
 
 // Class to create a hash
 // Code from: https://www.geeksforgeeks.org/c-program-hashing-chaining/
