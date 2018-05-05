@@ -1,5 +1,6 @@
 #include "vectorFunctions.h"
 
+// Original code from: https://www.geeksforgeeks.org/quick-sort/
 void qSort(vector<int>& v, int left, int right)
 {
 	if (v.size() <= 1) {
@@ -34,6 +35,7 @@ void qSort(vector<int>& v, int left, int right)
 	}
 }
 
+// Original code: https://www.geeksforgeeks.org/binary-search/
 int biSearch(vector<int>& v, int left, int right, int x)
 {
 	if (v.size() == 0) {
@@ -53,6 +55,7 @@ int biSearch(vector<int>& v, int left, int right, int x)
 	return -1;
 }
 
+// Original code from: https://codereview.stackexchange.com/questions/167680/merge-sort-implementation-with-vectors
 void mSort(vector<int> & bar) {
 	if (bar.size() <= 1) return;
 
@@ -69,6 +72,8 @@ void mSort(vector<int> & bar) {
 	mSort(right);
 	merge(left, right, bar);
 }
+
+// Original code from: https://codereview.stackexchange.com/questions/167680/merge-sort-implementation-with-vectors
 void merge(vector<int>&left, vector<int>& right, vector<int>& bars)
 {
 	int nL = left.size();

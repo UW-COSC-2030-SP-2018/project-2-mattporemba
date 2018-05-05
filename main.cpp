@@ -8,6 +8,7 @@
 #include <algorithm>
 #include "vectorFunctions.h"
 #include "bloom.h"
+#include "hash.h"
 
 using namespace std;
 
@@ -111,7 +112,20 @@ int main()
 	cout << "Merge sort of vector size 1: ";
 	print(corner2);
 
-
+	// Testing hash class
+	// Array with keys
+	cout << "\n\nTESTING hash function:" << endl << "Create a hash with 10 buckets, init:" << endl;
+	int a[] = { 20, 131, 23, 56, 2, 13, 47, 4, 32 };
+	// Size of array
+	int n = sizeof(a) / sizeof(a[0]);
+	Hash h(10);
+	for (int i = 0; i < n; i++) {
+		h.insertItem(a[i]);
+	}
+	h.displayHash();
+	cout << "\nDelete a hash that has been chained(23):" << endl;
+	h.deleteItem(23);
+	h.displayHash();
 
 	return 0;
 }
