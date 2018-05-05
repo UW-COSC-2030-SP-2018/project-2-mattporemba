@@ -47,6 +47,13 @@ int main()
 	}
 	cout << "Number of times qSort() succeeded: " << succeed << endl;
 	cout << "Number of times qSort() failed: " << fail << endl;
+	// Corner cases of empty and only single element
+	qSort(corner1, 0, 0);
+	cout << "Sorted empty vector: ";
+	print(corner1);
+	qSort(corner2, 0, size - 1);
+	cout << "Sorted single element vector: ";
+	print(corner2);
 
 	// Testing biSearch
 	cout << "\n\nTESTING biSearch():" << endl;
@@ -64,6 +71,13 @@ int main()
 	}
 	cout << "Number of times biSearch() succeeded: " << succeed << endl;
 	cout << "Number of times biSearch() failed: " << fail << endl;
+	// Test searching empty, and searching something that doesn't exists
+	int indexFound = biSearch(corner1, 0, 0, 100);
+	cout << "Searching for 100 in empty vector, index returned: " << indexFound << endl;
+	indexFound = biSearch(corner2, 0, corner2.size() - 1, 100);
+	cout << "Searching for element that does NOT exist in a vector, index returned: " << indexFound << endl;
+	indexFound = biSearch(corner2, 0, corner2.size() - 1, 1);
+	cout << "Searching for element that DOES exists in a vector of size 1, index returned: " << indexFound << endl;
 
 	// Reset test vectors by randomizing them again,
 	// initialize to hardcoded size and number of vectors
@@ -89,6 +103,13 @@ int main()
 	}
 	cout << "Number of times qSort() succeeded: " << succeed << endl;
 	cout << "Number of times qSort() failed: " << fail << endl;
+	// Testing corner cases, sorted an empty vector and size 1 vector
+	mSort(corner1);
+	cout << "Merge sort of empty vector: ";
+	print(corner1);
+	mSort(corner2);
+	cout << "Merge sort of vector size 1: ";
+	print(corner2);
 
 
 

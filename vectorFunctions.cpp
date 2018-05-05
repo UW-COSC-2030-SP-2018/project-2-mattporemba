@@ -2,6 +2,9 @@
 
 void qSort(vector<int>& v, int left, int right)
 {
+	if (v.size() <= 1) {
+		return;
+	}
 	int i(left), j(right);
 	int pivot = v[(left + right) / 2];
 	int temp;
@@ -33,6 +36,9 @@ void qSort(vector<int>& v, int left, int right)
 
 int biSearch(vector<int>& v, int left, int right, int x)
 {
+	if (v.size() == 0) {
+		return -1;
+	}
 	if (left <= right) {
 		int mid = (left + right) / 2;	// dropped -1
 		if (v[mid] == x) {
@@ -94,10 +100,12 @@ void merge(vector<int>&left, vector<int>& right, vector<int>& bars)
 void print(vector<int> v)
 {
 	if (v.size() == 0) {
+		cout << "{}" << endl;
 		return;
 	}
+	cout << "{";
 	for (int i = 0; i < v.size() - 1; i++) {
 		cout << v.at(i) << ", ";
 	}
-	cout << v.back() << endl;
+	cout << v.back() << "}" << endl;
 }
